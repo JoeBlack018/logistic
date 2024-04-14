@@ -1,0 +1,118 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('OIP.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Dark Gray */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #fff; /* White */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.toggle-bar {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-bar span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .toggle-bar {
+        display: flex;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: calc(50% - 40px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Blur effect for glass effect */
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d; /* Ensures child elements are rendered in 3D space */
+}
+
+.container:hover {
+    transform: translateY(-5px) rotateX(5deg) rotateY(5deg); /* Tilting effect */
+}
+
+.container img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: 10px;
+}
+
+.left, .right {
+    background: transparent; /* Transparent background */
+    color: #fff; /* White text color */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #fff; /* White */
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
